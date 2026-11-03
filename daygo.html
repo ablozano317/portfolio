@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DayGo | A.B. Lozano</title>
+    <link rel="icon" type="image/jpeg" href="assets/pink-sparkle.jpg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=BIZ+UDGothic&family=BIZ+UDPGothic&family=DotGothic16&family=M+PLUS+1p&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body class="case-study-page">
+    <main class="case-study">
+        <a class="btn case-study-back" href="index.html#projects">← Back to projects</a>
+
+        <div class="case-study-feature">
+            <header class="case-study-intro">
+                <p class="case-study-eyebrow">Projects</p>
+                <h1>DayGo</h1>
+                <p class="case-study-subtitle">Role: Front-End Web Developer &amp; UX Designer</p>
+                <p class="case-study-summary">A hackathon project for a mobile app focused on daily scheduling that incorporates real-time transit data.</p>
+            </header>
+
+            <figure class="case-study-hero-image">
+                <img src="assets/daygo.png" alt="DayGo logo">
+            </figure>
+        </div>
+
+        <section class="case-study-section" aria-labelledby="overview-heading">
+            <h2 id="overview-heading">Project overview</h2>
+            <p>DayGo brings daily scheduling together with real-time transit information in a web application. DayGo works backwards from your day instead of forwards. Give it a destination, when you need to arrive, and how you're getting there (car, transit, walking, biking), and it spits out the exact time you need to leave, buffer included. Attach that to a calendar event and it keeps recalculating as stuff changes, like a delay you know about, live traffic, whatever.</p>
+        </section>
+
+        <section class="case-study-section" aria-labelledby="ideation-heading">
+            <h2 id="ideation-heading">Ideation</h2>
+            <p>DayGo's planning flow starts with the destination and arrival time, then works backward to determine when to leave. This puts the user's goal first instead of asking them to plan each trip step by step. Everyone does the same mental math every morning: "it's a 20 min drive so I gotta leave by 8:40." We wanted an app that just does that for you instead of you eyeballing it. Visually we wanted it to resemble a timeline or a day planner, making it easy to see your schedule at a glance while incorporating features of transit applications. 
+                Design and user experience were central to making the app intuitive and helpful.
+            </p>
+        </section>
+
+        <section class="case-study-section" aria-labelledby="challenges-heading">
+            <h2 id="challenges-heading">Challenges</h2>
+            <p>-    Planning across driving, transit, walking, and biking means accounting for different travel times. DayGo also needs to recalculate plans when transit delays or traffic conditions change.
+        <br>
+        -   The hard part was coming up with a frontend that actually made good use of it, what the app should look like, what features mattered, how it should feel to use.
+        <br>
+        -   Recurring events were also way harder than we expected. Getting "every other Tuesday and Thursday until March" to expand into the right actual dates, and letting someone edit or delete just one occurrence without breaking the rest of the series, took a bunch of tries to get right.
+        <br>
+        -   Real geocoding and directions APIs fail in weird ways (bad addresses, no route found, rate limits), so we had to build fallbacks for every travel mode instead of assuming the API always cooperates.
+            </p>
+        </section>
+
+        <section class="case-study-section" aria-labelledby="results-heading">
+            <h2 id="results-heading">Results</h2>
+            <p>Going from "one simple departure time calculator" to an app with recurring events, a live routed map, weather-aware summaries, and notifications, all in one weekend. We look forward to improving on DayGo's functionality in the long term implementing features like Actual persistent storage instead of in-memory data, deeper calendar sync so DayGo can pull from a calendar you already use instead of just its own, and real routine scheduling, recurring whole days.</p>
+        </section>
+
+        <section class="case-study-section" aria-labelledby="project-link-heading">
+            <h2 id="project-link-heading">Explore the project</h2>
+            <p>View the DayGo project on Devpost.</p>
+            <a class="popup-link" href="https://devpost.com/software/daygo-07xiz6" target="_blank" rel="noopener noreferrer">Visit DayGo on Devpost →</a>
+        </section>
+    </main>
+
+</body>
+</html>

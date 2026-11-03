@@ -959,17 +959,35 @@ footer {
 
   .hero {
     grid-template-columns: 1fr;
-    gap: 30px;
-    padding: 40px 20px;
-    height: auto;
+    align-content: center;
+    gap: clamp(10px, 2svh, 18px);
+    padding: clamp(12px, 3svh, 24px) 20px;
+    min-height: 100svh;
   }
 
   .hero-content {
     display: contents;
   }
 
+  .hero > .hero-column:first-child {
+    display: none;
+  }
+
   .hero-column {
     width: 100%;
+  }
+
+  #hero-img {
+    width: min(70vw, 280px);
+    max-height: 34svh;
+  }
+
+  #hero-img img {
+    width: auto;
+    height: min(34svh, 250px);
+    max-width: 100%;
+    margin: 0 auto;
+    object-fit: contain;
   }
 
   .hero-chatbox {
@@ -977,7 +995,19 @@ footer {
     width: 100%;
     max-width: 620px;
     margin: 0 auto;
-    padding: 20px;
+    padding: clamp(12px, 4vw, 18px);
+  }
+
+  .hero .hero-title {
+    margin: 0;
+    font-size: clamp(1.25rem, 5vw, 1.65rem);
+    line-height: 1.2;
+  }
+
+  .hero .hero-typing-copy {
+    margin: 6px 0 0;
+    font-size: clamp(0.95rem, 4vw, 1.15rem);
+    line-height: 1.3;
   }
 
   .hero-content > .hero-column:first-child,
@@ -1018,7 +1048,8 @@ footer {
 @media (max-width: 480px) {
   /* Extra small screens */
   .hero {
-    padding: 30px 15px;
+    padding-right: 15px;
+    padding-left: 15px;
   }
 
 
